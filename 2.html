@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diandra Portfolio</title>
+  <link rel="stylesheet" href="https://use.typekit.net/clu2wsl.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'helvetica-neue', Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #111;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 3rem 2rem;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'adobe-caslon-pro', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.015em;
+    }
+    header p {
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      font-size: 1.2rem;
+      color: #444;
+      text-transform: uppercase;
+    }
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    #about img.photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #e5e5e5;
+      border-radius: 0;
+      box-shadow: inset 0 0 10px #ccc;
+      display: block;
+    }
+    #about .bio {
+      font-family: 'helvetica-neue', Helvetica, Arial, sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      color: #222;
+      text-align: left;
+      max-width: 480px;
+    }
+    #skills {
+      margin-bottom: 5rem;
+    }
+    #skills h2 {
+      font-family: 'adobe-caslon-pro', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: -0.015em;
+      color: #111;
+    }
+    #skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem 3rem;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+    #skills li:hover {
+      color: #555;
+      cursor: default;
+      transition: color 0.3s ease;
+    }
+    .vertical-section {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background: #f9f9f9;
+      padding: 0;
+    }
+    .vertical-section h2 {
+      max-width: 1100px;
+      margin: 2.5rem auto 1.5rem auto;
+      font-family: 'adobe-caslon-pro', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2.2rem;
+      color: #111;
+      letter-spacing: -0.015em;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .projects-vertical-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    .projects-vertical-list img.project-item {
+      width: 100vw;
+      height: 1000px;
+      object-fit: cover;
+      border-radius: 0;
+      margin: 0;
+      box-shadow: none;
+      display: block;
+      border: none;
+    }
+    .projects-vertical-list img.project-item + img.project-item {
+      border-top: none;
+    }
+    .projects-vertical-list img.project-item:hover {
+      filter: brightness(0.9);
+      cursor: pointer;
+    }
+    #contact {
+      text-align: center;
+      font-family: 'helvetica-neue', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 3rem;
+    }
+    #contact a {
+      color: #111;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    #contact a:hover {
+      border-color: #111;
+    }
+    footer {
+      text-align: center;
+      font-family: 'helvetica-neue', Helvetica, Arial, sans-serif;
+      color: #111;
+      font-size: 0.9rem;
+      padding: 1.8rem 1rem;
+      background: #fafafa;
+    }
+    @media (max-width: 860px) {
+      #about {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      #about .bio {
+        max-width: 100%;
+      }
+      #about img.photo-placeholder {
+        margin: 0 auto 2rem;
+        width: 240px;
+        height: 300px;
+      }
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      #skills ul {
+        gap: 1rem 1.5rem;
+      }
+      .projects-vertical-list img.project-item {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hi, there!</h1>
+  <p></p>
+</header>
+
+<main>
+
+  <section id="about">
+    <img src="images/my-photo.jpg" alt="Photo of Diandra Ihsan" class="photo-placeholder" />
+    <div class="bio">
+      <p>
+        I am Diandra Ihsan, a graphic designer passionate about exploring clean yet bold visual solutions. I enjoy working with monochrome palettes and strong typography to create impactful designs. Collaboration and continuous learning are my keys to success.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>Adobe Photoshop</li>
+      <li>Adobe Illustrator</li>
+      <li>Figma</li>
+      <li>UI/UX Design</li>
+      <li>Branding</li>
+      <li>Motion Graphics</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="vertical-section">
+    <h2>Selected Projects</h2>
+    <div class="projects-vertical-list" role="list">
+      <img src="images/project1.jpg" alt="Social Media Content design" class="project-item" role="listitem" />
+      <img src="images/project2.jpg" alt="Printed Media design" class="project-item" role="listitem" />
+      <img src="images/project3.jpg" alt="UI Design project" class="project-item" role="listitem" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:diandra@example.com">diandra@example.com</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Diandra Ihsan. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
