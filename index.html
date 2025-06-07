@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diandra Portfolio</title>
+  <link rel="stylesheet" href="https://use.typekit.net/clu2wsl.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "helvetica", sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      flex-direction: row-reverse;
+    }
+    .about-text {
+      max-width: 600px;
+      flex: 1;
+    }
+    .about-text h1 {
+      font-family: "adobe-caslon-pro", serif;
+      font-style: italic;
+      font-size: 3rem;
+      margin: 0 0 20px 0;
+    }
+    .about-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .about-image {
+      flex: 1;
+      max-width: 400px;
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .skills-block {
+      margin: 4rem 0;
+    }
+    .skills-block h3 {
+      font-weight: 400;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+    .skills-block p {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      max-width: 1000px;
+    }
+    .skills-block strong {
+      font-style: italic;
+      font-family: "adobe-caslon-pro", serif;
+      font-weight: 700;
+    }
+    .skills-block em {
+      font-style: italic;
+      font-family: "adobe-caslon-pro", serif;
+    }
+    .experience-title,
+    .project-title {
+      font-family: "adobe-caslon-pro", serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2.2rem;
+      color: #111;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .experiences {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .experience {
+      width: 45%;
+    }
+    .experience h3 {
+      font-weight: bold;
+      margin: 0;
+    }
+    .experience .location {
+      color: #aaa;
+      margin-left: 10px;
+      font-weight: normal;
+    }
+    .experience p {
+      margin: 4px 0;
+    }
+    .project-outer {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background: #f9f9f9;
+      padding: 0;
+    }
+    .projects-vertical-list img.project-item {
+      width: 100vw;
+      height: 1000px;
+      object-fit: cover;
+      border-radius: 0;
+      margin: 0;
+      box-shadow: none;
+      display: block;
+      border: none;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      max-width: 90%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact-block {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .contact-block .doily {
+      font-size: 0.9rem;
+      color: #a33;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      font-family: Georgia, serif;
+      line-height: 1.8;
+    }
+    .contact-info {
+      font-family: "helvetica", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: #111;
+    }
+    footer {
+      text-align: center;
+      font-family: "helvetica", sans-serif;
+      color: #111;
+      font-size: 0.9rem;
+      padding: 1.8rem 1rem;
+      background: #fafafa;
+    }
+    @media (max-width: 768px) {
+      .experience {
+        width: 100%;
+      }
+      .projects-vertical-list img.project-item {
+        height: auto;
+      }
+      .about {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="about">
+      <div class="about-text">
+        <h1>Hi!</h1>
+        <p>I am Diandra Ihsan, a graphic designer passionate about exploring clean yet bold visual solutions. I enjoy working with monochrome palettes and strong typography to create impactful designs. Collaboration and continuous learning are my keys to success.</p>
+      </div>
+      <div class="about-image">
+        <img src="images/my-photo.jpg" alt="Photo of Diandra" />
+      </div>
+    </div>
+
+    <section class="skills-block">
+      <h3>Skillset</h3>
+      <p><strong>Graphic Designer</strong>, Design Packaging, <em>Web Design</em>, <strong>Photography</strong>, <em>Social Media</em> Marketing, UI/UX, <em>Editing</em>, Branding, <strong>Content Creation</strong></p>
+    </section>
+
+    <section class="skills-block">
+      <h3>Toolset</h3>
+      <p><strong>Adobe</strong> (Photoshop, Illustrator), <em>Canva</em>, <strong>Figma</strong>, <strong>Google Workspace</strong>, <em>Microsoft</em> (Word, <strong>PowerPoint</strong>, Excel), <em>CapCut</em>, Notion</p>
+    </section>
+
+    <section class="skills-block">
+      <h3>Language</h3>
+      <p><strong>Indonesian</strong> (Native), <em>English</em> (Intermediate), <em>Javanese</em> (Intermediate)</p>
+    </section>
+
+    <div class="experience-title">Work Experiences</div>
+    <div class="experiences">
+      <div class="experience">
+        <h3>URBAN&CO <span class="location">Bandung, Indonesia</span></h3>
+        <p>Brand Graphic Designer</p>
+        <p>Aug 2022 - 2025</p>
+      </div>
+
+      <div class="experience">
+        <h3>Chlorine Digital Academy <span class="location">Surabaya, Indonesia</span></h3>
+        <p>Graphic Designer (Social Media & Print)</p>
+        <p>2021 – 2022</p>
+      </div>
+
+      <div class="experience">
+        <h3>Binus TV <span class="location">Jakarta, Indonesia</span></h3>
+        <p>Graphic Design Intern</p>
+        <p>3 months in 2020</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="projects" class="project-outer">
+    <h2 class="project-title">Selected Projects</h2>
+    <div class="projects-vertical-list" role="list">
+      <img src="images/project1.jpg" alt="Social Media Content design" class="project-item" onclick="openModal(this.src)" role="listitem" />
+      <img src="images/project2.jpg" alt="Printed Media design" class="project-item" onclick="openModal(this.src)" role="listitem" />
+      <img src="images/project3.jpg" alt="UI Design project" class="project-item" onclick="openModal(this.src)" role="listitem" />
+    </div>
+  </section>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <section class="contact-block">
+    <div class="doily">
+      TTHANK YOU FOR TAKING THE TIME TO EXPLORE MY WORK — IT TRULY MEANS A LOT. THIS PORTFOLIO IS MORE THAN JUST A COLLECTION OF PROJECTS; IT’S A REFLECTION OF MY GROWTH, CURIOSITY, AND DEDICATION TO THOUGHTFUL DESIGN. IF ANYTHING HERE SPARKS YOUR INTEREST OR YOU'D SIMPLY LIKE TO CONNECT, FEEL FREE TO REACH OUT. I'M ALWAYS OPEN TO MEANINGFUL CONVERSATIONS, NEW CHALLENGES, AND CREATIVE COLLABORATIONS.
+    </div>
+    <div class="contact-info">
+      <span>+6265687544</span>
+      <span>diandraihs@gmail.com</span>
+      <span>@diandraihs</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Diandra Ihsan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = src;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
